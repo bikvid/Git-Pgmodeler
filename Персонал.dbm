@@ -76,7 +76,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="dwh_process_id">
 		<type name="uuid" length="0"/>
 	</column>
-	<column name="department_name" not-null="true">
+	<column name="department_name1" not-null="true">
 		<type name="character varying" length="255"/>
 	</column>
 	<constraint name="hub_department_pkey" type="pk-constr" table="ods_data_personnel.hub_department">
