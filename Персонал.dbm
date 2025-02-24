@@ -4,7 +4,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
  Unexpected results may occur if the code is changed deliberately.
 -->
 <dbmodel pgmodeler-ver="1.1.5" use-changelog="false" max-obj-count="16"
-	 last-position="0,0" last-zoom="1" scene-rect="0,0,2569.16,1262.72"
+	 last-position="1129,574" last-zoom="1" scene-rect="0,0,2569.16,1263.72"
 	 default-schema="public" default-owner="postgres"
 	 layers="Default layer"
 	 active-layers="0"
@@ -191,7 +191,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		</idxelement>
 </index>
 
-<table name="hub_territory" layers="0" collapse-mode="2" max-obj-count="6" z-value="0">
+<table name="hub_territory1" layers="0" collapse-mode="2" max-obj-count="6" z-value="0">
 	<schema name="ods_data_personnel"/>
 	<role name="postgres"/>
 	<position x="60" y="340"/>
@@ -210,12 +210,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="territory_name" not-null="true">
 		<type name="character varying" length="255"/>
 	</column>
-	<constraint name="hub_territory_pkey" type="pk-constr" table="ods_data_personnel.hub_territory">
+	<constraint name="hub_territory_pkey" type="pk-constr" table="ods_data_personnel.hub_territory1">
 		<columns names="hub_territory_hkey" ref-type="src-columns"/>
 	</constraint>
 </table>
 
-<index name="idx_hub_territory_dt_tech" table="ods_data_personnel.hub_territory"
+<index name="idx_hub_territory_dt_tech" table="ods_data_personnel.hub_territory1"
 	 concurrent="false" unique="false" fast-update="false" buffering="false" nulls-not-distinct="false"
 	 index-type="btree" factor="90">
 		<idxelement use-sorting="false">
@@ -573,7 +573,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </constraint>
 
 <constraint name="sat_people_hub_territory" type="fk-constr" comparison-type="MATCH SIMPLE"
-	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="ods_data_personnel.hub_territory" table="ods_data_personnel.sat_people">
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="ods_data_personnel.hub_territory1" table="ods_data_personnel.sat_people">
 	<columns names="hub_territory_hkey" ref-type="src-columns"/>
 	<columns names="hub_territory_hkey" ref-type="dst-columns"/>
 </constraint>
@@ -659,7 +659,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 <relationship name="rel_sat_people_hub_territory" type="relfk" layers="0"
 	 custom-color="#ce06b4"
 	 src-table="ods_data_personnel.sat_people"
-	 dst-table="ods_data_personnel.hub_territory" reference-fk="sat_people_hub_territory"
+	 dst-table="ods_data_personnel.hub_territory1" reference-fk="sat_people_hub_territory"
 	 src-required="false" dst-required="true"/>
 
 </dbmodel>
